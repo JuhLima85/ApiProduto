@@ -1,0 +1,24 @@
+version: "3"
+services:
+  apirest:
+    image: apirest
+    restart: always
+    build: .
+    ports:
+      - 9090:8080 
+    environment:
+      - MYSQL_HOST=mysqldb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_PORT=3306
+      
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    volumes:
+      - /home/ernilson/Área de Trabalho/db:/var/lib/mysql
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_DATABASE=apidb
+      - MYSQL_ROOT_PASSWORD=root
