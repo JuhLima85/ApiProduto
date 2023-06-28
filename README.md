@@ -1,17 +1,16 @@
 # API REST - PRODUTO 
 
-Esta API REST de produto é empacotada em um contêiner Docker personalizado, oferecendo dois benefícios: a segurança dos dados e a facilidade na implantação e gerenciamento da aplicação em diferentes ambientes.
+Esta API REST de produto é empacotada em um contêiner Docker oferecendo a facilidade na implantação e gerenciamento da aplicação em diferentes ambientes.
 
 # Tecnologias utilizadas:
 
 - Java 11
 - Spring Boot
 - Swagger
-- Banco de dados: MySQL (será criado automaticamente 'apidb')
+- Banco de dados: MySQL (apidb)
 - Docker
 
-### Você pode rodar o projeto usando a imagem da aplicação que está hospedada no Docker Hub ou baixando-o aqui no GitHub.
-### Executar projeto usando a imagem da aplicação:
+# Executar projeto usando a imagem da aplicação:
 #### 1 – Inicie o contêiner MySQL:
 `docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_DATABASE=testedb -p 3307:3306 -d mysql`
 ####  2 – Crie uma rede para unir a aplicação ao banco de dados:
@@ -25,7 +24,7 @@ Esta API REST de produto é empacotada em um contêiner Docker personalizado, of
 
 <br/>
 
-### Executar usando o projeto do GitHub: 
+# Executar usando o projeto do GitHub: 
 `docker-compose up`
 #### URL da aplicação: http://localhost:8080/swagger-ui.html
 
