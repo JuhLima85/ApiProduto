@@ -10,7 +10,7 @@ Esta API REST de produto é empacotada em um contêiner Docker oferecendo a faci
 - Banco de dados: MySQL (apidb)
 - Docker
 
-# Executar projeto usando a imagem da aplicação:
+# Executar com banco e container separados:
 #### 1 – Inicie o contêiner MySQL:
 `docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_DATABASE=testedb -p 3307:3306 -d mysql`
 ####  2 – Crie uma rede para unir a aplicação ao banco de dados:
@@ -24,7 +24,7 @@ Esta API REST de produto é empacotada em um contêiner Docker oferecendo a faci
 
 <br/>
 
-# Executar usando o projeto do GitHub: 
+# Executar com docker compose: 
 `docker-compose up`
 #### URL da aplicação: http://localhost:8080/swagger-ui.html
 
